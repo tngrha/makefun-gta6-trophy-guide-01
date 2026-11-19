@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+  <h1>Leonida Legend</h1>
+  <p class="sub">All 55 official trophies with cited guides, a roadmap to the platinum, missable flags, and a checklist that saves in your browser. Works fully offline — this page loads nothing from the network.</p>
+  <div class="progress-wrap" aria-label="Overall progress">
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <p id="progress-text">0 of 55 earned</p>
+  </div>
+  <ul id="grade-counts" class="grade-counts"></ul>
+</header>
+
+<section class="controls" aria-label="Tracker controls">
+  <nav class="filters" aria-label="Filter trophies">
+    <button type="button" data-filter="all" class="active">All 55</button>
+    <button type="button" data-filter="story">Story</button>
+    <button type="button" data-filter="missable">Missable</button>
+    <button type="button" data-filter="collectibles">Collectibles</button>
+    <button type="button" data-filter="activities">Activities</button>
+    <button type="button" data-filter="earned">Earned</button>
+    <button type="button" data-filter="remaining">Remaining</button>
+  </nav>
+  <div class="control-row">
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="search">Search
+      <input id="search" type="search" placeholder="Name, mission, keyword…" autocomplete="off">
+    </label>
+    <label class="spoiler">
+      <input id="spoiler" type="checkbox">
+      Spoiler shield — hide story trophies until earned
+    </label>
+  </div>
+  <div class="control-row">
+    <button id="export" type="button">Export progress (JSON)</button>
+    <label class="import">Import progress
+      <input id="import" type="file" accept="application/json">
+    </label>
+    <span id="visible-count" class="visible-count"></span>
+  </div>
+</section>
+
+<details id="roadmap" class="roadmap" aria-label="Roadmap to platinum">
+  <summary><h2>Roadmap to Platinum — tap to expand</h2></summary>
+  <p class="roadmap-note">Built from the official descriptions: chapters and named missions first, collectible counts and activity totals as cleanup. Trophies flagged <span class="badge missable">MISSABLE</span> are tied to a single named mission, a character strand, or a character challenge in their official description — clear them before the finale.</p>
+  <ol class="roadmap-steps">
+    <li><strong>Step 1 — Story spine.</strong> Play Gone Fishing, then Chapters 1–4 in order (Just Like Paradise → Paradise Lost → T**s Ass Drug Money → Vice City, Baby! → Top Of The World, Ma). These cannot be missed, but pause at each chapter break for Step 2.</li>
+    <li><strong>Step 2 — Named missions &amp; strands as they appear.</strong> Whenever a named mission (Breakfast Run, The Cartel Heist, Child's Play, Headliners, VCIA Takedown, Operation Savage Glory) or a character strand (Andy, Kenton, Billy, Randy, Tyrone) opens, finish it before advancing the story. Eight completed strands also earn Strangers &amp; Freaks. Character tasks for Cal (fishing) and Bret (the hunt) belong in this step too.</li>
+    <li><strong>Step 3 — Finale gate.</strong> Before the final mission (You Gotta Know When to Get Off), open the Missable filter and confirm every flagged trophy is ticked. Treat the finale as a point of no return for strand content.</li>
+    <li><strong>Step 4 — Collectibles cleanup.</strong> Explore all 52 areas of Leonida, meditate at all 18 spots, complete 3 Collectible Card sets, WAiNK It at 100 locations, discover 100 vehicles, buy all 8 garage properties, and register 10 vehicles in the Scooter Bros app.</li>
+    <li><strong>Step 5 — Activities cleanup.</strong> Gold all 42 Shooting Range challenges, win Top Fun drone races at all 14 locations, win 20 different races, complete 250 stunts and 50 challenges, try all 9 activity types, rob 5 bank vaults, one illegal operation per gang (9), and finish the one-off feats (Sneakthief, Gunslinger, Hot Together, Retail Therapy…).</li>
+    <li><strong>Step 6 — Money &amp; 100%.</strong> Launder $250,000 of Marked Bills, spend $100,000 across shops, and mop up the cryptic one-offs (Challenging Tank, Personal Best, The Truth Is Out There) using their guides. Attain 100% Completion (A Long Road), and the platinum — Vice Got a Price! — unlocks itself.</li>
+  </ol>
+  <p class="roadmap-missables"><strong>Missable-flagged in this tracker:</strong> <span id="missable-list">loading…</span></p>
+</details>
+
+<main>
+  <ul id="trophy-list" class="trophy-list"></ul>
+  <p id="empty" class="empty" hidden>No trophies match the current filter and search.</p>
+</main>
+
+<footer>
+  <p>Official names, descriptions and grades: the PlayStation 5 trophy list for Grand Theft Auto VI as published by <strong>Exophase (GTA VI PSN trophies)</strong> and <strong>PSNProfiles (GTA VI trophy list)</strong>, which agree on all 55 entries. Guides are written for this tracker from those official descriptions; where a description is cryptic, the guide says so instead of inventing steps. Progress is stored only in your browser (localStorage) and in files you export.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
